@@ -29,7 +29,7 @@ app.use('/gmp/image', express.static("public/images"));
 app.get('/gmp/api/test', (req, res) => res.status(200).json({ message: 'test api' }));
 
 // app.use(unspecifiedRouteHandler);
-app.use(finalErrorHandler);
+//app.use(finalErrorHandler);
 
 const initialiseServer = async () => {
     try {
