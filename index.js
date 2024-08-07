@@ -7,7 +7,7 @@ const morgan = require('morgan');
 const app = express();
 
 // const unspecifiedRouteHandler = require('./routes/unspecifiedRouteHandler.js');
-//const { finalErrorHandler } = require('./errorHandler/apiErrorHandler');
+const { finalErrorHandler } = require('./errorHandler/apiErrorHandler');
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const locationRoutes = require('./routes/locationRoutes');
@@ -29,7 +29,7 @@ app.use('/gmp/api/location', locationRoutes);
 app.get('/gmp/api/test', (req, res) => res.status(200).json({ message: 'test api' }));
 
 // app.use(unspecifiedRouteHandler);
-//app.use(finalErrorHandler);
+app.use(finalErrorHandler);
 
 const initialiseServer = async () => {
     try {
