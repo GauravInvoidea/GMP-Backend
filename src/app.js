@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const morgan = require('morgan');
 
-const unspecifiedRouteHandler = require('./routes/unspecifiedRouteHandler.js');
+// const unspecifiedRouteHandler = require('./routes/unspecifiedRouteHandler.js');
 const { finalErrorHandler } = require('./errorHandler/apiErrorHandler');
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
@@ -25,7 +25,7 @@ app.use('/gmp/api/location', locationRoutes);
 
 app.get('/gmp/api/test', (req, res) => res.status(200).json({ message: 'test api' }));
 
-app.use(unspecifiedRouteHandler);
+// app.use(unspecifiedRouteHandler);
 app.use(finalErrorHandler);
 
 module.exports = app;
