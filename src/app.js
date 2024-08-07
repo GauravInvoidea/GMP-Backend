@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const morgan = require('morgan');
 
-const unspecifiedRouteHandler = require('./routes/unspecifiedRouteHandler');
+const unspecifiedRouteHandler = require('./routes/unspecifiedRouteHandler.js');
 const { finalErrorHandler } = require('./errorHandler/apiErrorHandler');
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
